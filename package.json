@@ -1,0 +1,52 @@
+{
+  "name": "jest-boilerplate",
+  "version": "1.0.0",
+  "description": "jest config boilerplate",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "author": "CatalystDP",
+  "license": "MIT",
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "ts-jest",
+      ".(js|jsx)": "babel-jest"
+    },
+    "testEnvironment": "node",
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/test/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 95,
+        "lines": 95,
+        "statements": 95
+      }
+    },
+    "collectCoverageFrom": [
+      "src/*.{js,ts}"
+    ]
+  },
+  "dependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@types/jest": "^24.0.11",
+    "babel-jest": "^24.7.1",
+    "jest": "^24.7.1",
+    "jest-html-reporters": "^1.1.3",
+    "majestic": "^1.3.0",
+    "ts-jest": "^24.0.2"
+  }
+}
